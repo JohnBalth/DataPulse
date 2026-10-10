@@ -1,0 +1,29 @@
+# Ambientes virtuais
+.venv/
+.venv313/
+venv/
+
+# Arquivos Python temporários
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Banco de dados local
+db.sqlite3
+*.sqlite3
+
+# Variáveis de ambiente e segredos
+.env
+.env.*
+
+# Cobertura de testes
+.coverage
+htmlcov/
+
+# Editor e sistema operacional
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Arquivo geográfico grande
+data/raw/olist_geolocation_dataset.csv

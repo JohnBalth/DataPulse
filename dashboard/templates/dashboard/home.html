@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }} | Dashboard</title>
+
+    <style>
+        :root {
+            --background: #f4f7fb;
+            --surface: #ffffff;
+            --primary: #2563eb;
+            --text: #172033;
+            --muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 24px 6%;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+        }
+
+        header p {
+            margin: 0;
+            color: #cbd5e1;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 32px auto;
+            padding: 0 24px;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 22px;
+            box-shadow: 0 2px 10px #0f172a0a;
+        }
+
+        .label {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .value {
+            margin-top: 12px;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .notice {
+            margin-top: 24px;
+            padding: 18px;
+            background: #eff6ff;
+            border-radius: 10px;
+            color: #1e40af;
+        }
+
+        @media (max-width: 800px) {
+            .metrics {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>{{ page_title }}</h1>
+        <p>{{ page_subtitle }}</p>
+    </header>
+
+    <main>
+        <h2 class="section-title">Visão geral das vendas</h2>
+
+        <section class="metrics">
+            <article class="card">
+                <div class="label">Faturamento</div>
+                <div class="value">A calcular</div>
+            </article>
+
+            <article class="card">
+                <div class="label">Pedidos</div>
+                <div class="value">A calcular</div>
+            </article>
+
+            <article class="card">
+                <div class="label">Ticket médio</div>
+                <div class="value">A calcular</div>
+            </article>
+
+            <article class="card">
+                <div class="label">Lucro</div>
+                <div class="value">A calcular</div>
+            </article>
+        </section>
+
+        <div class="notice">
+            O dashboard está em construção.
+            Na próxima etapa, conectaremos os indicadores aos dados reais.
+        </div>
+    </main>
+</body>
+</html>
